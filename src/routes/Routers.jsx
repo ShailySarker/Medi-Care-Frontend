@@ -8,6 +8,7 @@ const Routers = () => {
         <Routes>
             <Route
                 index
+                path="/"
                 element={<LandingPage />}
             />
             <Route

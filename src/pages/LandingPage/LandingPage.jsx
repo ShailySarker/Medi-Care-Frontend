@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
-import { FaStethoscope } from 'react-icons/fa';
 import { GiStethoscope } from 'react-icons/gi';
-import { PiStethoscopeDuotone } from 'react-icons/pi';
 import "./LandingPage.css";
 import { useNavigate } from 'react-router';
 

@@ -4,6 +4,7 @@ import SearchBar from "../../components/SearchBar";
 import { useState, useEffect } from "react";
 import DoctorCard from './Components/DoctorCard';
 import { TfiFaceSad } from 'react-icons/tfi';
+import AppointmentForm from './Components/AppointmentForm';
 
 const Home = () => {
     const [doctors, setDoctors] = useState([
@@ -51,6 +52,11 @@ const Home = () => {
         setShowForm(true);
     };
 
+    const handleSubmitAppointment = (appointment) => {
+        // Save appointment to local storage or state
+        alert("Appointment is booked successfully!!")
+        console.log("Appointment booked:", appointment);
+    };
 
     return (
         <Container>
@@ -78,6 +84,15 @@ const Home = () => {
                         </div>
                 }
             </Row>
+            <AppointmentForm
+                show={showForm}
+                onHide={() => {
+                    setShowForm(false);
+                    window.location.reload();
+                }}
+                doctor={selectedDoctor}
+                onSubmit={handleSubmitAppointment}
+            />
         </Container>
     );
 };

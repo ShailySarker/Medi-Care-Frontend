@@ -8,10 +8,10 @@ const MainLayouts = () => {
         window.scrollTo(0, 0);
     }, [pathname]);
     return (
-        <>
+        <div className='bg-primary bg-opacity-25 min-vh-100'>
           <Header />
           <Outlet />  
-        </>
+        </div>
     );
 };
 

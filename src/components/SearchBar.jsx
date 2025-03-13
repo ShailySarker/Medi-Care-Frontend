@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import { Form, FormControl, Button } from "react-bootstrap";
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, onReset }) => {
     const [query, setQuery] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
         onSearch(query);
     };
+
+    const handleReset = () => {
+        setQuery(""); // Clear the search query
+        onReset(); // Reset the data to show all doctors
+    };
+
 
     return (
         <Form onSubmit={handleSubmit} className="d-flex gap-2">
@@ -20,6 +26,13 @@ const SearchBar = ({ onSearch }) => {
             />
             <Button type="submit" variant="outline-primary hover:primary fw-semibold">
                 Search
+            </Button>
+            <Button
+                type="button"
+                variant="outline-secondary hover:secondary fw-semibold"
+                onClick={handleReset}
+            >
+                Reset
             </Button>
         </Form>
     );

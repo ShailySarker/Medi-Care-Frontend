@@ -11,7 +11,9 @@ Building a Doctor Search & Appointment Booking UI with the following features:
 
 # 1. Homepage (Doctor Search)
 A search bar where users can enter a doctor's name or specialty.
+
 Display a list of doctors (fetch from a mock API or use a predefined list).
+
 Each doctor card should display:
 Doctor's Name
 Specialty

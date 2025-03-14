@@ -4,7 +4,7 @@
 https://medi-care-frontend.vercel.app
 
 # Technologies:
-JavaScript, Bootstrap, React Bootstrap, ReactJS, React Router, Local-Store.
+JavaScript, Bootstrap, React Bootstrap, ReactJS, React Router, Local Storage.
 
 # Description:
 Building a Doctor Search & Appointment Booking UI with the following features:
@@ -22,6 +22,7 @@ Ensure the UI is responsive.
 
 # 2. Appointment Booking Form (Popup/Separate Page)
 When a user clicks on "Book Appointment," open a modal/popup or navigate to a new page.
+
 Form fields:
 Patient Name
 Age
@@ -33,6 +34,7 @@ Submit button to save appointment details in local state (no backend required).
 
 # 3. Appointments List Page
 Display a table/list of booked appointments.
+
 Each row should have:
 Patient Name, Doctor Name, Date, Time
 "Edit" and "Cancel" buttons.

@@ -1,12 +1,75 @@
-# React + Vite
+# Project Name: Medi Care Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Website Link:
+https://medi-care-frontend.vercel.app
 
-Currently, two official plugins are available:
+# Technologies:
+JavaScript, Bootstrap, React Bootstrap, ReactJS, React Router, Local-Store.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Description:
+Building a Doctor Search & Appointment Booking UI with the following features:
 
-## Expanding the ESLint configuration
+# 1. Homepage (Doctor Search)
+A search bar where users can enter a doctor's name or specialty.
+Display a list of doctors (fetch from a mock API or use a predefined list).
+Each doctor card should display:
+Doctor's Name
+Specialty
+Experience (years)
+Location
+"Book Appointment" button
+Ensure the UI is responsive.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 2. Appointment Booking Form (Popup/Separate Page)
+When a user clicks on "Book Appointment," open a modal/popup or navigate to a new page.
+Form fields:
+Patient Name
+Age
+Gender (Dropdown)
+Mobile Number
+Preferred Date (Date Picker)
+Preferred Time Slot (Dropdown)
+Submit button to save appointment details in local state (no backend required).
+
+# 3. Appointments List Page
+Display a table/list of booked appointments.
+Each row should have:
+Patient Name, Doctor Name, Date, Time
+"Edit" and "Cancel" buttons.
+Editing should allow modification of appointment details.
+
+# Website View:
+
+# Landing Page:
+
+![Alt Text](src/assets/Images/landing-page.png)
+
+# Home Page:
+
+![Alt Text](src/assets/Images/home.png)
+
+# Appointment Form Adding Modal:
+
+![Alt Text](src/assets/Images/appointmemt-form.PNG)
+
+# Appointments Page:
+
+![Alt Text](src/assets/Images/appointments.png)
+
+# Appointment Form editing Modal:
+
+![Alt Text](src/assets/Images/edit-appoinment.PNG)
+
+# Run
+
+# Clone this repository
+$ git clone https://github.com/ShailySarker/Medi-Care-Frontend  
+
+# Go into the repository
+$ cd Medi-Care-Frontend
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm run dev

@@ -11,7 +11,7 @@ const DoctorCard = ({ doctor, onBookAppointment }) => {
                     <strong>Experience:</strong> {doctor?.experience} years<br />
                     <strong>Location:</strong> {doctor?.location}
                 </Card.Text>
-                <Button variant="primary" onClick={() => onBookAppointment(doctor)}>
+                <Button variant="primary" className="fw-semibold" onClick={() => onBookAppointment(doctor)}>
                     Book Appointment
                 </Button>
             </Card.Body>

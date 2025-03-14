@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import SearchBar from "../../components/SearchBar";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import DoctorCard from './Components/DoctorCard';
 import { TfiFaceSad } from 'react-icons/tfi';
 import AppointmentForm from './Components/AppointmentForm';
@@ -34,11 +34,10 @@ const Home = () => {
     const [filteredDoctors, setFilteredDoctors] = useState(doctors); // State for filtered doctors
 
     const handleSearch = (query) => {
-        // Mock search functionality
-        const filteredDoctors = doctors.filter(
+        const filteredDoctors = doctors?.filter(
             (doctor) =>
-                doctor.name.toLowerCase().includes(query.toLowerCase()) ||
-                doctor.specialty.toLowerCase().includes(query.toLowerCase())
+                doctor?.name?.toLowerCase().includes(query.toLowerCase()) ||
+                doctor?.specialty?.toLowerCase().includes(query.toLowerCase())
         );
         setDoctors(filteredDoctors);
     };
@@ -53,13 +52,10 @@ const Home = () => {
     };
 
     const handleSubmitAppointment = (appointment) => {
-        // Fetch existing data from local storage
         const existingAppointments = JSON.parse(localStorage.getItem("appointments")) || [];
 
-        // Add the new appointment to the array
-        const updatedAppointments = [...existingAppointments, appointment];
+       const updatedAppointments = [...existingAppointments, appointment];
 
-        // Save updated array back to local storage
         localStorage.setItem("appointments", JSON.stringify(updatedAppointments));
 
         alert("Appointment is booked successfully!!");

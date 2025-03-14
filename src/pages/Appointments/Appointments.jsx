@@ -90,7 +90,7 @@ const Appointments = () => {
     };
 
     return (
-        <Container>
+        <Container className="min-vh-100">
             <h3 className="my-4">Appointments List</h3>
             <div>
                 {

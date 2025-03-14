@@ -53,10 +53,19 @@ const Home = () => {
     };
 
     const handleSubmitAppointment = (appointment) => {
-        // Save appointment to local storage or state
-        alert("Appointment is booked successfully!!")
-        console.log("Appointment booked:", appointment);
+        // Fetch existing data from local storage
+        const existingAppointments = JSON.parse(localStorage.getItem("appointments")) || [];
+    
+        // Add the new appointment to the array
+        const updatedAppointments = [...existingAppointments, appointment];
+    
+        // Save updated array back to local storage
+        localStorage.setItem("appointments", JSON.stringify(updatedAppointments));
+    
+        alert("Appointment is booked successfully!!");
+        console.log("Appointment booked:", updatedAppointments);
     };
+    
 
     return (
         <Container>

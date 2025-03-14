@@ -27,7 +27,7 @@ const Header = () => {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-center flex-grow-1 fs-xl-5 fs-6 gap-xl-3 gap-2">
+                <Nav className="justify-content-center flex-grow-1 fs-xl-5 fs-6 gap-xl-3 gap-2 fw-semibold">
                   <Nav.Link href="/home">Home</Nav.Link>
                   <Nav.Link href="/appointments">Appointments</Nav.Link>
                 </Nav>

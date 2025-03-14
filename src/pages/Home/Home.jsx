@@ -55,17 +55,17 @@ const Home = () => {
     const handleSubmitAppointment = (appointment) => {
         // Fetch existing data from local storage
         const existingAppointments = JSON.parse(localStorage.getItem("appointments")) || [];
-    
+
         // Add the new appointment to the array
         const updatedAppointments = [...existingAppointments, appointment];
-    
+
         // Save updated array back to local storage
         localStorage.setItem("appointments", JSON.stringify(updatedAppointments));
-    
+
         alert("Appointment is booked successfully!!");
         console.log("Appointment booked:", updatedAppointments);
     };
-    
+
 
     return (
         <Container>
@@ -85,11 +85,9 @@ const Home = () => {
                                     </Col>
                                 ))}
                         </> :
-                        <div>
-                            <div className="fw-bolder d-flex flex-row justify-content-center align-items-center py-5 my-5 gap-2 gap-md-3">
-                                <TfiFaceSad className="display-5" />
-                                <p className="h3">Sorry, no data found!</p>
-                            </div>
+                        <div className="fw-bolder d-flex flex-row justify-content-center align-items-center py-5 my-5 gap-2 gap-md-3">
+                            <TfiFaceSad className="display-5" />
+                            <p className="h3">Sorry, no data found!</p>
                         </div>
                 }
             </Row>

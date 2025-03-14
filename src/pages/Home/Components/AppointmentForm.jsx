@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Modal, Form, Button } from "react-bootstrap";
 import "./AppointmentForm.css";
+import { useNavigate } from "react-router";
 const AppointmentForm = ({ show, onHide, doctor, onSubmit }) => {
+    const navigate = useNavigate()
     const [patientName, setPatientName] = useState("");
     const [age, setAge] = useState("");
     const [gender, setGender] = useState("");
@@ -10,16 +12,9 @@ const AppointmentForm = ({ show, onHide, doctor, onSubmit }) => {
     const [time, setTime] = useState("");
 
     const handleMobileInput = (input) => {
-        // Remove any non-digit characters (except +)
         const sanitizedInput = input.replace(/[^\d]/g, '');
-
-        // Fixed country code
         const countryCode = '+91';
-
-        // Allow only 10 digits after +91
         const userInput = sanitizedInput.slice(2, 12);
-
-        // Set the value with fixed +91
         setMobile(`${countryCode}${userInput}`);
     };
 
@@ -37,12 +32,7 @@ const AppointmentForm = ({ show, onHide, doctor, onSubmit }) => {
             alert("Mobile number must be 10 digit !");
             return;
         }
-        // if (mobile?.length !== 12) {
-        //     alert("Mobile number must be 10 digit !");
-        //     return;
-        // }
-
-
+        
         if (patientName && age && gender && mobile && date && time && doctor?.name) {
 
             const appointment = {
@@ -57,6 +47,7 @@ const AppointmentForm = ({ show, onHide, doctor, onSubmit }) => {
 
             onSubmit(appointment);
             onHide();
+            navigate("/appointments")
             window.location.reload();
         } else {
             alert("Kindly fill up the form correctly!")

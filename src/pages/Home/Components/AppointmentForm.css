@@ -1,5 +1,4 @@
 .custom-modal .modal-dialog {
-    max-width: 800px; /* Set your desired width */
-    width: 80%; /* You can control the width with percentage */
-  }
-  
+  max-width: 800px;
+  width: 80%;
+}
